@@ -74,3 +74,15 @@ else:
 
     total = sum(e["amount_rupees"] for e in expenses)
     st.markdown(f"### Total: ₹{total:,.2f}")
+    
+st.subheader("Summary by Category")
+from collections import defaultdict
+cat_totals = defaultdict(Decimal)
+for e in expenses:
+    cat_totals[e["category"]] += e["amount_rupees"]
+
+cat_df = pd.DataFrame([
+    {"Category": cat, "Total (₹)": f"₹{amt:,.2f}"}
+    for cat, amt in sorted(cat_totals.items(), key=lambda x: x[1], reverse=True)
+])
+st.dataframe(cat_df, use_container_width=True)
