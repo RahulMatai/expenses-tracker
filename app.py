@@ -13,7 +13,6 @@ st.set_page_config(
 
 db.init_db()
 
-
 st.subheader("Add New Expense")
 
 with st.form("add_expense_form", clear_on_submit=True):
