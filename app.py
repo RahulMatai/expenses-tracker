@@ -11,6 +11,8 @@ st.set_page_config(
     layout="wide",
 )
 
+db.init_db()
+
 
 st.subheader("Add New Expense")
 

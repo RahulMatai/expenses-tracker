@@ -2,7 +2,7 @@
 
 A minimal, production-quality personal expense tracking web app built with Python and Streamlit.
 
-**Live App →** _(add Streamlit Cloud URL after deployment)_
+**Live App →** https://expenses-tracker-8zyorvqqecm3nznzgsgtpg.streamlit.app/
 
 ## Tech Stack
 - **Frontend + Backend:** Python / Streamlit
