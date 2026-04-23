@@ -30,3 +30,18 @@
 - User might click submit twice low bandwidth issue sometimes takes time to refresh, Unique contraint on 'client_id' silently ignores dubplicate.
 
 **tradeoff:** More Session stage management for UI
+
+
+
+## 4. Design Decisions and Trade offs
+
+**what we achieved** 
+- SQLite for storage, as built in python
+- Paisa (integer) storage for money no float precision bugs
+- Decimal for all calulations
+
+**Actul Trade offs** 
+- Sqlite resets on streamlit cloud restarts
+- no delete or edit expenses features
+- single user assumed
+- no Pagination for personal use.
